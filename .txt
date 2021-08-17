@@ -1,4 +1,1 @@
-sd,jhfg rvbekuytg4
-ekfnwoe
-qwjfbqpw
-qwifqp
+print("hello world")
