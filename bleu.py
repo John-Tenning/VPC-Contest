@@ -3,20 +3,17 @@ from sacremoses import MosesDetokenizer
 
 def get_bleu_score_from_file(predict_text_file: str, test_text_file: str) -> float:
     detokenizer = MosesDetokenizer(lang='en')
-
     refs = []
     with open(test_text_file, 'r') as test:
         for line in test:
             refs.append(detokenizer.detokenize(line.strip().split()))
     print("Test file - first sentence: ", refs[0])
     refs = [refs]
-
     preds = []
     with open(predict_text_file, 'r') as pred:
         for line in pred:
             preds.append(detokenizer.detokenize(line.strip().split()))
     print("Predicted file - first sentence: ", preds[0])    
-
     bleu = sacrebleu.corpus_bleu(preds, refs)
     return bleu.score
 
