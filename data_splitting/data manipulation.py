@@ -1,14 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[11]:
-
-
-
-
-
-# In[14]:
-
 
 import re
 for i in range(23,32):
@@ -48,16 +37,4 @@ for i in range(23,32):
     f.close()
     g.close()
     h.close()
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
 
