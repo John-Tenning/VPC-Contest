@@ -1,8 +1,7 @@
 import sacrebleu
 from sacremoses import MosesDetokenizer
 
-def get_bleu_score_from_file(predict_text_file: str, test_text_file: str) -> None:
-    
+def get_bleu_score_from_file(predict_text_file: str, test_text_file: str) -> float:
     detokenizer = MosesDetokenizer(lang='en')
 
     refs = []
