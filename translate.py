@@ -1,12 +1,12 @@
-from indicTrans.inference.engine import Model
-
-indic2en_model = Model(expdir='../indic-en')
-
-def translate(tamil_file : str,translate_source : str) -> None :
+def eng_translate(tamil_file : str,translate_source : str) -> None :
     '''
     Takes cleaned Tamil files as input and translate it to English using AI4bharath NLP model 
     For setup of the required packages check readme of "https://github.com/John-Tenning/VPC-Contest"
     '''
+    from indicTrans.inference.engine import Model
+
+    indic2en_model = Model(expdir='../indic-en')
+    
     tamil_open = open(tamil_file,'r')
 
     tamil_read = tamil_open.readlines()
