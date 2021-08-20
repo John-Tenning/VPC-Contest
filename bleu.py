@@ -1,7 +1,20 @@
+"""@package bleu
+Documentation for this module.
+
+More details.
+"""
+
 import sacrebleu
 from sacremoses import MosesDetokenizer
 
 def get_bleu_score_from_file(predict_text_file: str, test_text_file: str) -> float:
+    """
+     This function takes a whole text file as input and returns the BLEU score.
+     For reference, see https://blog.machinetranslation.io/compute-bleu-score/
+     @param predict_text_file: The predicted text file.
+     @param test_text_file: The test text file.
+     @return: The BLEU score in float.
+    """
     detokenizer = MosesDetokenizer(lang='en')
     refs = []
     with open(test_text_file, 'r') as test:
