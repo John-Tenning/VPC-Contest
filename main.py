@@ -1,4 +1,5 @@
 from clean import tamilClean , englishClean
+from translate import eng_translate
 from bleu import get_sentence_bleu_score_from_file
 # from gtranslate import gtranslate_sentence
 
@@ -7,7 +8,7 @@ from bleu import get_sentence_bleu_score_from_file
 #cleaning tamil files
 def clean_tamil_files() -> None:
     for section_num in range(22, 32):
-        tamil_file = open(f'Clean_Files/EnglishCleanfiles/{section_num} - eng.txt', 'r', encoding='utf-8')
+        tamil_file = open(f'Clean_Files/TamilCleanfiles/{section_num} - tamil.txt', 'r', encoding='utf-8')
 
         tamil_contents = tamil_file.read()
 
@@ -15,7 +16,7 @@ def clean_tamil_files() -> None:
 
         tamil_final = tamilClean(tamil_contents).split('.')
 
-        cleaned_file = open(f'VPC-Contest\TamilFiles\Tamil-{section_num}.txt', 'w', encoding='utf-8')
+        cleaned_file = open(f'FinalTamilFiles/Tamil-{section_num}.txt', 'w', encoding='utf-8')
 
         for i in range(len(tamil_final)):
             contents = f'{tamil_final[i].strip()}\n\n'
@@ -36,7 +37,7 @@ def clean_english_files() -> None:
 
         english_final = englishClean(english_contents).split('.')
 
-        cleaned_file = open(f'VPC-Contest\EnglishFiles\English-{section_num}.txt', 'w', encoding='utf-8')
+        cleaned_file = open(f'FinalEnglishFiles/English-{section_num}.txt', 'w', encoding='utf-8')
 
         for i in range(len(english_final)):
             contents = f'{english_final[i].strip()}\n\n'
@@ -60,7 +61,11 @@ clean_tamil_files()
 
 #Step2 => To translate the Tamil files
 
-#translate()
+def translate() -> None :
+    for i in range(22,32):
+        eng_translate(f'FinalTamilFiles/Tamil-{section_num}.txt',f'Translate/Translate-{section_num}.txt')
+
+translate()
 
 #Step 3 => To find the bleu score
 find_bleu_score()
