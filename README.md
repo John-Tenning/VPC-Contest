@@ -8,7 +8,7 @@ python Parser.py
 
 ```
 
-## Repository requirements for translation
+## Repository-requirements-for-translation
 
 ```
 
