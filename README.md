@@ -52,5 +52,5 @@ unzip indic-en.zip
 
 %cd indicTrans
 ```
-Sample Colab Notebook [Google Colab](https://colab.research.google.com/drive/1UByeetC68GibBxZq_wxVu4JxqVmdWvzY?usp=sharing)
+Sample Colab Notebook [here](https://colab.research.google.com/drive/1UByeetC68GibBxZq_wxVu4JxqVmdWvzY?usp=sharing)
 
