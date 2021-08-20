@@ -63,11 +63,12 @@ def find_bleu_score() -> None:
 
 #Step 1 => To clean english and tamil files , removing brackets etc
 
-clean_english_files()
-clean_tamil_files()
-                                           
-#Step2 => To translate the Tamil files
-translate()
-
-#Step 3 => To find the bleu score
-find_bleu_score()
+if __name__ == "__main__":
+    clean_english_files()
+    clean_tamil_files()
+                                               
+    #Step2 => To translate the Tamil files
+    translate()
+    
+    #Step 3 => To find the bleu score
+    find_bleu_score()
