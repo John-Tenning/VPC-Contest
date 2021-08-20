@@ -7,7 +7,7 @@ from bleu import get_sentence_bleu_score_from_file
 #cleaning tamil files
 def clean_tamil_files() -> None:
     for section_num in range(22, 32):
-        tamil_file = open(f'VPC-Contest\Resources\Mahabharatha-Adiparva-Section{section_num}-ta.txt', 'r', encoding='utf-8')
+        tamil_file = open(f'F:/VPC-Contest/Clean_Files/EnglishCleanfiles/{section_num} - eng.txt', 'r', encoding='utf-8')
 
         tamil_contents = tamil_file.read()
 
@@ -28,7 +28,7 @@ def clean_tamil_files() -> None:
 #cleaning english files
 def clean_english_files() -> None:
     for section_num in range(22, 32):
-        english_file = open(f'VPC-Contest\Resources\Mahabharatha-Adiparva-Section{section_num}-en.txt', 'r', encoding='utf-8')
+        english_file = open(f'F:/VPC-Contest/Clean_Files/EnglishCleanfiles/{section_num} - eng.txt', 'r', encoding='utf-8')
 
         english_contents = english_file.read()
 
