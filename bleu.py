@@ -44,5 +44,5 @@ def get_sentence_bleu_score_from_file(predict_text_file: str, test_text_file: st
 
     return 
 
-for i in range(22,32) :
-  get_sentence_bleu_score_from_file(f"/content/English-{i}.txt" ,f"/content/translate-{i}.txt" ,f"/content/Results/res-{i}.txt")
+'''for i in range(22,32) :
+  get_sentence_bleu_score_from_file(f"/content/English-{i}.txt" ,f"/content/translate-{i}.txt" ,f"/content/Results/res-{i}.txt")'''
