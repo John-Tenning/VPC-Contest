@@ -45,11 +45,18 @@ def clean_english_files() -> None:
 
         cleaned_file.close()
         return
+ 
+#translation
+def translate() -> None :
+    for section_num in range(22,32):
+        eng_translate(f'FinalTamilFiles/Tamil-{section_num}.txt',f'Translate/Translate-{section_num}.txt')
+    
+    return
 
 #finding bleu_scores
 def find_bleu_score() -> None:
-    for i in range(22,32) :
-        get_sentence_bleu_score_from_file(f"/content/English-{i}.txt" ,f"/content/translate-{i}.txt" ,f"/content/Results/res-{i}.txt")
+    for section_num in range(22,32) :
+        get_sentence_bleu_score_from_file((f'FinalEnglishFiles/Eng-{section_num}.txt' ,f'Translate/Translate-{section_num}.txt ,f"/content/Results/res-{section_num}.txt")
 
     return
 
@@ -58,13 +65,8 @@ def find_bleu_score() -> None:
 
 clean_english_files()
 clean_tamil_files()
-
+                                           
 #Step2 => To translate the Tamil files
-
-def translate() -> None :
-    for i in range(22,32):
-        eng_translate(f'FinalTamilFiles/Tamil-{section_num}.txt',f'Translate/Translate-{section_num}.txt')
-
 translate()
 
 #Step 3 => To find the bleu score
