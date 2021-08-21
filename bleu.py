@@ -6,7 +6,6 @@ More details.
 
 import sacrebleu
 from sacremoses import MosesDetokenizer
-from clean import quotes_clean
 
 def get_bleu_score_from_file(predict_text_file: str, test_text_file: str) -> float:
     """
@@ -21,44 +20,50 @@ def get_bleu_score_from_file(predict_text_file: str, test_text_file: str) -> flo
     with open(test_text_file, 'r') as test:
         for line in test:
             refs.append(detokenizer.detokenize(line.strip().split()))
-    print("Test file - first sentence: ", refs[0])
+    print("\nTest file - first sentence: ", refs[0])
     refs = [refs]
     preds = []
     with open(predict_text_file, 'r') as pred:
         for line in pred:
             preds.append(detokenizer.detokenize(line.strip().split()))
-    print("Predicted file - first sentence: ", preds[0])    
+    print("\nPredicted file - first sentence: ", preds[0])    
     bleu = sacrebleu.corpus_bleu(preds, refs)
     return bleu.score
 
-def get_sentence_bleu_score_from_file(predict_text_file: str, test_text_file: str, bleu_evaluate_file: str) -> None:
-    
+def get_sentence_bleu_score_from_file(predict_text_file: str, test_text_file: str, bleu_evaluate_file: str , index: int) -> None:
+    score=count=0
     detokenizer = MosesDetokenizer(lang='en')
 
     refs = []
     with open(test_text_file, 'r') as test:
         for line in test:
-            line = quotes_clean(line)
             refs.append(detokenizer.detokenize(line.strip().split()))
-    print("Test file - first sentence: ", refs[0])
+    print("\nTest file - first sentence: ", refs[0])
 
     preds = []
     with open(predict_text_file, 'r') as pred:
         for line in pred:
-            line = quotes_clean(line)
             preds.append(detokenizer.detokenize(line.strip().split()))
-    print("Predicted file - first sentence: ", preds[0])    
+    print("\nPredicted file - first sentence: ", preds[0])    
 
     with open(bleu_evaluate_file, 'w+') as bleu_file:
         for line in zip(refs, preds):
-            test = line[0]
-            pred = line[1]
-            print(test, '\t----->\t', pred)
-            bleu = sacrebleu.sentence_bleu(pred, [test], smooth_method='exp')
-            print(bleu.score, "\n")
-            bleu_file.write(str(bleu.score)+'\n')
+            if len(line[0])>1:
+                test = line[0]
+                pred = line[1]
+                #print(test, '\t----->\t', pred)
+                bleu = sacrebleu.sentence_bleu(pred, [test], smooth_method='exp')
+                score+=bleu.score
+                count+=1
+                #print(bleu.score, "\n")
+        avg=score/count
+        print("\nAverage Bleu Score : ",avg)
+        content = f"File {index} : {avg}"
+        bleu_file.write(content+'\n')
 
     return 
 
 '''for i in range(22,32) :
   get_sentence_bleu_score_from_file(f"/content/English-{i}.txt" ,f"/content/translate-{i}.txt" ,f"/content/Results/res-{i}.txt")'''
+
+#get_sentence_bleu_score_from_file("E:/25 - translate.txt","D:/VPC-Contest/Align_Files/EnglishCleanfiles/25 - eng.txt","bleu.txt",25)
