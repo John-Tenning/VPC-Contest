@@ -34,7 +34,7 @@ def eng_translate(tamil_file : str,translate_source : str) -> None :
 
     for i in translate:
         write_file.writelines(i)
-        write_file.write('\n')
+        write_file.write('\n\n')
 
     write_file.close()
     tamil_open.close()
