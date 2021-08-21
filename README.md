@@ -1,12 +1,25 @@
-# VPC-Contest-August-2021
+# Venmurasu-Contest-August-2021
 
+## Overview
+
+This repository is a solution for the [**Aug 2021 - Venmurasu Programming Contest**](https://github.com/venmurasu-programming-team/Aug2021-contest) .
+The objective of the solution is to translate Tamil contents to English using NLP models like **Indictrans** and **Mbart50_m2m** to get a basic understanding of NLP models.
+
+## Gearing-Up
 ```
 python -m venv virtualenv
 virtualenv/Scripts/activate
+
+git clone https://github.com/John-Tenning/VPC-Contest.git
 pip install -r requirements.txt
-python Parser.py
 
 ```
+## Strategy
+
+### **1. Analysing the Resources**
+
+There are English and Tamil version of 10 sections in Mahabharatham. There are unwanted characters like brackets and quotes.
+Both the files doesn't give equal number of sentences while splitting it when using fullstop as delimiter .
 
 ## Repository-requirements-for-translation
 
