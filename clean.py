@@ -19,7 +19,13 @@ def tamilClean(tamil : str) -> str:
 
     return tamil
 
+def quotes_clean(english : str) -> str :
+    remove_patterns = ['p. \d\d', 'viz.,', 'i.e.,', 'paragraph continues', 'Footnotes', '"', "'", r'\([^)]*\)']
 
+    for pattern in remove_patterns:
+        english = re.sub(pattern, '', english)
+    
+    return english
 
 def englishClean(english : str) -> str:
 

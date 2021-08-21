@@ -6,6 +6,7 @@ More details.
 
 import sacrebleu
 from sacremoses import MosesDetokenizer
+from clean import quotes_clean
 
 def get_bleu_score_from_file(predict_text_file: str, test_text_file: str) -> float:
     """
@@ -37,12 +38,14 @@ def get_sentence_bleu_score_from_file(predict_text_file: str, test_text_file: st
     refs = []
     with open(test_text_file, 'r') as test:
         for line in test:
+            line = quotes_clean(line)
             refs.append(detokenizer.detokenize(line.strip().split()))
     print("Test file - first sentence: ", refs[0])
 
     preds = []
     with open(predict_text_file, 'r') as pred:
         for line in pred:
+            line = quotes_clean(line)
             preds.append(detokenizer.detokenize(line.strip().split()))
     print("Predicted file - first sentence: ", preds[0])    
 
