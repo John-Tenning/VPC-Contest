@@ -1,9 +1,10 @@
 import re
 
 def tamilClean(tamil : str) -> str:
-
+    tamil = tamil.split('\n')
+    tamil = "\n".join(tamil)
     # Removing the patterns
-    remove_patterns = ['\d,\d', '\d-\d', '\d', r'\([^)]*\)', '\n', '”', '"', "'"]
+    remove_patterns = ['\d,\d', '\d-\d', '\d', r'\([^)]*\)', '”', '"', "'"]
 
     for pattern in remove_patterns:
         tamil = re.sub(pattern, '', tamil)
@@ -28,13 +29,13 @@ def quotes_clean(english : str) -> str :
     return english
 
 def englishClean(english : str) -> str:
-
     # Removing the section name
+    # print(english)
     english_lines = english.split('\n')
-    if english_lines[0][0] == 'S':
+    if english_lines[0].startswith("SECTION"):
         english_lines = english_lines[2:]
 
-    english = ''.join(english_lines)
+    english = '.'.join(english_lines)
 
     # Removing the patterns
     remove_patterns = ['p. \d\d', 'viz.,', 'i.e.,', 'paragraph continues', 'Footnotes', '"', "'", r'\([^)]*\)']
@@ -44,6 +45,8 @@ def englishClean(english : str) -> str:
     
     # Removing the footnotes
     english_sents = english.split('.')
-    english = '.'.join(english_sents[:-2])
+    english = '\n'.join(english_sents[:-2])
+
+    # english = english.replace('\n\n' , '\n')
     
     return english
