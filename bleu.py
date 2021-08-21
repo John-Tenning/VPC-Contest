@@ -56,7 +56,7 @@ def get_sentence_bleu_score_from_file(predict_text_file: str, test_text_file: st
             print(test, '\t----->\t', pred)
             bleu = sacrebleu.sentence_bleu(pred, [test], smooth_method='exp')
             print(bleu.score, "\n")
-            bleu_file.write(str(bleu.score),'\n')
+            bleu_file.write(str(bleu.score)+'\n')
 
     return 
 
