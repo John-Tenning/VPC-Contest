@@ -63,7 +63,6 @@ def get_sentence_bleu_score_from_file(predict_text_file: str, test_text_file: st
 
     return 
 
-'''for i in range(22,32) :
-    get_sentence_bleu_score_from_file(f"Translate/translate-{i}.txt" ,f"Data/EnglishCleanfiles-{i}.txt",f"Bleu/Indic_Result.txt",i)'''
+for i in range(22,32) :
+    get_sentence_bleu_score_from_file(f"./Translate/{i} - translate.txt" ,f"./Data/EnglishCleanfiles/{i} - eng.txt",f"./BLEU_Result.txt",i)
 
-#get_sentence_bleu_score_from_file("E:/25 - translate.txt","D:/VPC-Contest/Align_Files/EnglishCleanfiles/25 - eng.txt","bleu.txt",25)

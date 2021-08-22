@@ -7,13 +7,11 @@ The objective of the solution is to translate Tamil contents to English using NL
 
 ___
 ## Gearing-Up
-Run this command in a terminal to setup virtual environment for our repository
+Install all the dependencies required for this solution via requirements.txt
 ```
 
 git clone https://github.com/John-Tenning/VPC-Contest.git
 cd ./VPC-Contest
-python -m venv virtualenv
-virtualenv/Scripts/activate
 pip install -r requirements.txt
 
 ```
@@ -82,9 +80,13 @@ You can find the sample Collab Notebook, [**here**](https://colab.research.googl
 ### 4. Calculating Bleu score
 
 BLEU is one of the standard measures to calculate the accuracy and quality of the Machine Translation system. BLEU calculations are independent of the translation model/framework used.  
+Quotations tend to increase the BLEU score, according to our solution. But since both these languages hold meaning for quotations in their grammar, we couldn't ignore it. 
 
+Reference: [Calculating BLEU](https://blog.machinetranslation.io/compute-bleu-score/)
 
 ### 5. BONUS
+
+
 
 #### Translation
 #### Bleu Score

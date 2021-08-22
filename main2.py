@@ -17,7 +17,7 @@ if __name__ == "__main__":
 
         tamil_final = tamilClean(tamil_contents).split('.')
 
-        cleaned_file = open(f'Data/FinalTamilFiles/{section_num} - tam.txt', 'w', encoding='utf-8')
+        cleaned_file = open(f'./Data/TamilCleanfiles/{section_num} - tam.txt', 'w', encoding='utf-8')
 
         for i in range(len(tamil_final)):
             contents = f'{tamil_final[i].strip()}\n\n'
@@ -28,7 +28,7 @@ if __name__ == "__main__":
 
     #cleaning english files
     for section_num in range(22, 32):
-        english_file = open(f'resources/Mahabharatha-Adiparva-Section{section_num}-en.txt', 'r', encoding='utf-8')
+        english_file = open(f'./resources/Mahabharatha-Adiparva-Section{section_num}-en.txt', 'r', encoding='utf-8')
 
         english_contents = english_file.read()
 
@@ -36,7 +36,7 @@ if __name__ == "__main__":
 
         english_final = englishClean(english_contents).split('.')
 
-        cleaned_file = open(f'Data/FinalEnglishFiles/{section_num} - eng.txt', 'w', encoding='utf-8')
+        cleaned_file = open(f'./Data/EnglishCleanfiles/{section_num} - eng.txt', 'w', encoding='utf-8')
 
         for i in range(len(english_final)):
             contents = f'{english_final[i].strip()}\n\n'
@@ -48,13 +48,13 @@ if __name__ == "__main__":
     #Step2 => To translate the Tamil files
 
     for section_num in range(22,32):
-        eng_translate(f'Data/FinalTamilFiles/{section_num} - tam.txt',f'Translate/{section_num} - translate.txt')
+        eng_translate(f'./Data/TamilCleanfiles/{section_num} - tam.txt',f'Translate/{section_num} - translate.txt')
 
 
     #finding bleu_scores
     #Step 3 => To find the bleu score
 
     for section_num in range(22,32) :
-        get_sentence_bleu_score_from_file(f'Data/FinalEnglishFiles/{section_num} - eng.txt' ,f'Translate/{section_num} - translate.txt' ,f"Translate/indic_bleu_result.txt",section_num)
+        get_sentence_bleu_score_from_file(f'./Data/EnglishCleanfiles/{section_num} - eng.txt' ,f'./Translate/{section_num} - translate.txt' ,f"./Translate/indic_bleu_result.txt",section_num)
 
 
