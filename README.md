@@ -15,7 +15,7 @@ cd ./VPC-Contest
 pip install -r requirements.txt
 
 ```
-
+[Main.py](https://github.com/John-Tenning/VPC-Contest/blob/main/main.py) is the driver file for the solution and submodule .py files also can be seen in the main branch
 ___
 
 ## Strategy
