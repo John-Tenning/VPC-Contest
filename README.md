@@ -26,7 +26,7 @@ ___
 
 * The characters: parentheses, brackets and quotations, were considered unwanted.
 
-* Tamil and English share the period/fullstop as the common sentence delimiter. But analysing the text in the files, it was found that it didnot produce equal number of tamil sentences with respective translated english sentences.
+* Tamil and English share the period/fullstop as the common sentence delimiter. But analysing the text in the files, it was found that it did not produce equal number of tamil sentences with respective translated english sentences.
 
 
 ### 2. Data Preprocessing
@@ -118,9 +118,9 @@ ___
 ## Members
 
 * TG Ashwin Kumar       [@tgashwinkumar](https://github.com/tgashwinkumar)
-* Jeyam Palaniappan     [@jeyam03](https://github.com/jeyam03)
-* Samyuktha Mohan       [@samyuktha-12](https://github.com/samyuktha-12)
-* Sashti Amar RA        [@John-Tenning](https://github.com/John-Tenning)
-* Suvan Satyendra       [@suvanbalu](https://github.com/suvanbalu)
+* Jeyam Palaniappan D   [@jeyam03](https://github.com/jeyam03)
+* Samyuktha M S         [@samyuktha-12](https://github.com/samyuktha-12)
+* Sashti Amar R A       [@John-Tenning](https://github.com/John-Tenning)
+* Suvan Satyendira B    [@suvanbalu](https://github.com/suvanbalu)
 
 ___
