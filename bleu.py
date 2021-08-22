@@ -30,7 +30,7 @@ def get_bleu_score_from_file(predict_text_file: str, test_text_file: str) -> flo
     bleu = sacrebleu.corpus_bleu(preds, refs)
     return bleu.score
 
-def get_sentence_bleu_score_from_file(test_text_file: str,predict_text_file: str ,bleu_evaluate_file: str , index: int) -> None:
+def get_sentence_bleu_score_from_file(test_text_file: str,predict_text_file: str ,bleu_evaluate_file: str , index: int) -> float :
 
     """
     This function takes a whole text file as input ,splits them into list of sentences and finds the blue score for individual snetences and return the file that contains average of all BLEU scores. 
@@ -74,6 +74,6 @@ def get_sentence_bleu_score_from_file(test_text_file: str,predict_text_file: str
 
     return avg
 
-for i in range(22,32) :
-    get_sentence_bleu_score_from_file(f"./Translate/{i} - translate.txt" ,f"./Data/EnglishCleanfiles/{i} - eng.txt",f"./BLEU_Result.txt",i)
+'''for i in range(22,32) :
+    get_sentence_bleu_score_from_file(f"./Translate/{i} - translate.txt" ,f"./Data/EnglishCleanfiles/{i} - eng.txt",f"./BLEU_Result.txt",i)'''
 
