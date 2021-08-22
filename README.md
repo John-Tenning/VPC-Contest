@@ -7,7 +7,7 @@ The objective of the solution is to translate Tamil contents to English using NL
 
 ___
 ## Gearing-Up
-Install all the dependencies required for this solution via requirements.txt
+Install all the dependencies required for this solution 
 ```
 
 git clone https://github.com/John-Tenning/VPC-Contest.git
