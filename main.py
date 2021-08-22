@@ -17,7 +17,7 @@ if __name__ == "__main__":
 
         tamil_final = tamilClean(tamil_contents).split('.')
 
-        cleaned_file = open(f'./Data/TamilCleanfiles/{section_num} - tam.txt', 'w', encoding='utf-8')
+        cleaned_file = open(f'./Clean/TamilCleanfiles/{section_num} - tam.txt', 'w', encoding='utf-8')
 
         for i in range(len(tamil_final)):
             contents = f'{tamil_final[i].strip()}\n\n'
@@ -36,7 +36,7 @@ if __name__ == "__main__":
 
         english_final = englishClean(english_contents).split('.')
 
-        cleaned_file = open(f'./Data/EnglishCleanfiles/{section_num} - eng.txt', 'w', encoding='utf-8')
+        cleaned_file = open(f'./Clean/EnglishCleanfiles/{section_num} - eng.txt', 'w', encoding='utf-8')
 
         for i in range(len(english_final)):
             contents = f'{english_final[i].strip()}\n\n'
