@@ -192,9 +192,6 @@ for ind in range(22,32):
     write_file.writelines(i)
     write_file.write('\n\n')
     ```
-    The translated files can be found in the folders [bonus_mbart50_m2m] and [bonus_googleapi].
-   
-
 ___
 ## Members
 
