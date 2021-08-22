@@ -22,7 +22,7 @@ ___
 
 ### 1. Analysing the Resources
 
-* There were 10 sections of English and Tamil version of Mahabharatham in the repository [**resource**](https://github.com/John-Tenning/VPC-Contest/tree/main/resources)(numbered 22-31).
+* There were 10 sections of English and Tamil version of Mahabharatham in the repository [**Resource**](https://github.com/John-Tenning/VPC-Contest/tree/main/resources)(numbered 22-31).
 
 * The characters: parentheses, brackets and quotations, were considered unwanted.
 
@@ -31,7 +31,7 @@ ___
 
 ### 2. Data Preprocessing
 
-*  An approach of processing the data was taken by using self-produced Python programs. As the stratergy failed, the files were first cleaned (removal of "",[],(),'') and sentences were split automatically using [**clean.py**](https://github.com/John-Tenning/VPC-Contest/blob/main/clean.py) module and those files were saved in the repo [**clean**](https://github.com/John-Tenning/VPC-Contest/tree/main/Clean)
+*  An approach of processing the data was taken by using self-produced Python programs. As the stratergy failed, the files were first cleaned (removal of "",[],(),'') and sentences were split automatically using [**Clean.py**](https://github.com/John-Tenning/VPC-Contest/blob/main/clean.py) module and those files were saved in the repo [**clean**](https://github.com/John-Tenning/VPC-Contest/tree/main/Clean)
 * Once files were split, manual checking was done to merge and split sentences to make equal number of sentences in both English and Tamil files.  
 * This manual checking is done so that each sentence of Tamil file corresponds to respective sentence of reference English file so that bleu score can be calculated, meaningfully. 
 * The cleaned files were saved in local folder [**Data**](https://github.com/John-Tenning/VPC-Contest/tree/main/Data) as two different folders named TamilCleanfiles and EnglishCleanfiles.  
@@ -75,7 +75,7 @@ We'll be using specific modules for library *fairseq*.
 from fairseq import checkpoint_utils, distributed_utils, options, tasks, utils
 ```
 
-You can find the sample Collab Notebook, [**here**](https://colab.research.google.com/drive/1UByeetC68GibBxZq_wxVu4JxqVmdWvzY?usp=sharing).
+You can find the sample Collab Notebook, [**Here**](https://colab.research.google.com/drive/1UByeetC68GibBxZq_wxVu4JxqVmdWvzY?usp=sharing).
 
 ### 4. Calculating Bleu score
 
