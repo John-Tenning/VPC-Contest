@@ -182,15 +182,13 @@ for ind in range(22,32):
     for j in range(5000,len(ta_sent)):
        k=ta_sent[j]
        translate.append(GoogleTranslator(source='tamil', target='en').translate(k))
-    
-
-#create a folder called translate
 
   write_file = open(f"/content/translate/{ind} - translate.txt",'w')
 
   for i in translate:
     write_file.writelines(i)
-    write_file.write('\n\n')```
+    write_file.write('\n\n')
+    ```
 ___
 ## Members
 
