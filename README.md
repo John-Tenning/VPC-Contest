@@ -59,20 +59,20 @@ pip install --editable ./
 %cd ..
 ```
 
-Restart the runtime after running prev cell (to update) if you are using Colab. See this [**Stackoverflow Source**](https://stackoverflow.com/questions/57838013/modulenotfounderror-after-successful-pip-install-in-google-colaboratory).
-This import will not work without restarting runtime abstract.
+Restart the runtime after running prev cell (to update) if you are using **Colab**. See this [**Stackoverflow Source**](https://stackoverflow.com/questions/57838013/modulenotfounderror-after-successful-pip-install-in-google-colaboratory).
+This import will not work without restarting runtime abstract.  
+
+We'll be using specific modules for library *fairseq*.
+
+```
+from fairseq import checkpoint_utils, distributed_utils, options, tasks, utils
+```
 
 ```
 wget https://storage.googleapis.com/samanantar-public/V0.2/models/indic-en.zip
 unzip indic-en.zip
 
 %cd indicTrans
-```
-
-We'll be using specific modules for library *fairseq*.
-
-```
-from fairseq import checkpoint_utils, distributed_utils, options, tasks, utils
 ```
 
 You can find the sample Collab Notebook, [**Here**](https://colab.research.google.com/drive/1UByeetC68GibBxZq_wxVu4JxqVmdWvzY?usp=sharing).
