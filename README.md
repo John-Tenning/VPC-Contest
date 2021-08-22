@@ -34,7 +34,7 @@ ___
 *  An approach of processing the data was taken by using self-produced Python programs. As the stratergy failed, the files were first cleaned (removal of "",[],(),'') and sentences were split automatically using [**clean.py**](https://github.com/John-Tenning/VPC-Contest/blob/main/clean.py) module and those files were saved in the repo [**clean**](https://github.com/John-Tenning/VPC-Contest/tree/main/Clean)
 * Once files were split, manual checking was done to merge and split sentences to make equal number of sentences in both English and Tamil files.  
 * This manual checking is done so that each sentence of Tamil file corresponds to respective sentence of reference English file so that bleu score can be calculated, meaningfully. 
-* The cleaned files were saved in local folder [**Data**](https://github.com/John-Tenning/VPC-Contest/tree/main/Data) as two different folders named TamilCleanfiles and EnglishCleabfiles.  
+* The cleaned files were saved in local folder [**Data**](https://github.com/John-Tenning/VPC-Contest/tree/main/Data) as two different folders named TamilCleanfiles and EnglishCleanfiles.  
 * They were saved in different folders because it makes file parsing for translation and calculating Bleu score easy.  
 
 ### 3. Translating Files
