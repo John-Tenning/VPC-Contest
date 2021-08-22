@@ -12,7 +12,7 @@ Install all the dependencies required for this solution via requirements.txt
 
 git clone https://github.com/John-Tenning/VPC-Contest.git
 cd ./VPC-Contest
-pip install -r requirements.txt
+pip install sacrebleu
 
 ```
 [Main.py](https://github.com/John-Tenning/VPC-Contest/blob/main/main.py) is the driver file for the solution.
