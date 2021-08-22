@@ -79,14 +79,48 @@ You can find the sample Collab Notebook, [**here**](https://colab.research.googl
 
 ### 4. Calculating Bleu score
 
-BLEU is one of the standard measures to calculate the accuracy and quality of the Machine Translation system. BLEU calculations are independent of the translation model/framework used.  
-Quotations tend to increase the BLEU score, according to our solution. But since both these languages hold meaning for quotations in their grammar, we couldn't ignore it. 
+* BLEU is one of the standard measures to calculate the accuracy and quality of the Machine Translation system. 
+* BLEU calculations are independent of the translation model/framework used.
+* Quotations tend to increase the BLEU score, according to our solution. But since both these languages hold meaning for quotations in their grammar, we couldn't ignore it.
+* The file [**bleu.py**](https://github.com/John-Tenning/VPC-Contest/blob/main/bleu.py) is used to calculate BLEU score
 
-Reference: [Calculating BLEU](https://blog.machinetranslation.io/compute-bleu-score/)
+Reference: [**Computing BLEU Score for Machine Translation**](https://blog.machinetranslation.io/compute-bleu-score/)
+
+The Average BLEU score for the file is given below :
+```
+File 22 : 10.926209425092425
+File 23 : 9.389193875582405
+File 24 : 8.554833408247244
+File 25 : 8.400111401819778
+File 26 : 8.765172826342521
+File 27 : 7.580158606214755
+File 28 : 6.894618163743909
+File 29 : 10.812070278960649
+File 30 : 8.962625883376859
+File 31 : 6.090987459345413
+File 22 : 10.926209425092425
+File 23 : 9.389193875582405
+File 24 : 8.554833408247244
+File 25 : 8.400111401819778
+File 26 : 8.765172826342521
+File 27 : 7.580158606214755
+File 28 : 6.894618163743909
+File 29 : 10.812070278960649
+File 30 : 8.962625883376859
+File 31 : 6.090987459345413
+```
 
 ### 5. BONUS
 
+For the bonus part of the solution, we have approached the [**MBart-50**](https://huggingface.co/transformers/v3.5.1/model_doc/mbart.html) and [**Google Translate**](https://py-googletrans.readthedocs.io/en/latest/).
 
+___
+## Members
 
-#### Translation
-#### Bleu Score
+* TG Ashwin Kumar       [@tgashwinkumar](https://github.com/tgashwinkumar)
+* Jeyam Palaniappan     [@jeyam03](https://github.com/jeyam03)
+* Samyuktha Mohan       [@samyuktha-12](https://github.com/samyuktha-12)
+* Sashti Amar RA        [@John-Tenning](https://github.com/John-Tenning)
+* Suvan Satyendra       [@suvanbalu](https://github.com/suvanbalu)
+
+___
