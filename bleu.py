@@ -46,7 +46,7 @@ def get_sentence_bleu_score_from_file(predict_text_file: str, test_text_file: st
             preds.append(detokenizer.detokenize(line.strip().split()))
     print("\nPredicted file - first sentence: ", preds[0])    
 
-    with open(bleu_evaluate_file, 'w+') as bleu_file:
+    with open(bleu_evaluate_file, 'a+') as bleu_file:
         for line in zip(refs, preds):
             if len(line[0])>1:
                 test = line[0]
@@ -64,6 +64,6 @@ def get_sentence_bleu_score_from_file(predict_text_file: str, test_text_file: st
     return 
 
 '''for i in range(22,32) :
-  get_sentence_bleu_score_from_file(f"/content/English-{i}.txt" ,f"/content/translate-{i}.txt" ,f"/content/Results/res-{i}.txt")'''
+    get_sentence_bleu_score_from_file(f"Translate/translate-{i}.txt" ,f"Data/EnglishCleanfiles-{i}.txt",f"Bleu/Indic_Result.txt",i)'''
 
 #get_sentence_bleu_score_from_file("E:/25 - translate.txt","D:/VPC-Contest/Align_Files/EnglishCleanfiles/25 - eng.txt","bleu.txt",25)
