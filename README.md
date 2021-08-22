@@ -98,16 +98,8 @@ File 28 : 6.894618163743909
 File 29 : 10.812070278960649
 File 30 : 8.962625883376859
 File 31 : 6.090987459345413
-File 22 : 10.926209425092425
-File 23 : 9.389193875582405
-File 24 : 8.554833408247244
-File 25 : 8.400111401819778
-File 26 : 8.765172826342521
-File 27 : 7.580158606214755
-File 28 : 6.894618163743909
-File 29 : 10.812070278960649
-File 30 : 8.962625883376859
-File 31 : 6.090987459345413
+
+Average Score : 8.637598132872595
 ```
 
 ### 5. BONUS
@@ -155,6 +147,8 @@ for ind in range(22,32):
   write_file.close()
   tamil_open.close()
   ```
+  **The average BLEU score for Mbart-50 is :** 8.66 (file wise score [here](https://github.com/John-Tenning/VPC-Contest/blob/main/bonus_mbart50_m2m/mbart_bleu.txt))  
+  
   The second approach is done using Google translate.
   
   ```
