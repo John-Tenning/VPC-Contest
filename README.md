@@ -198,6 +198,6 @@ ___
 * Jeyam Palaniappan D   [@jeyam03](https://github.com/jeyam03)
 * Samyuktha M S         [@samyuktha-12](https://github.com/samyuktha-12)
 * Sashti Amar R A       [@John-Tenning](https://github.com/John-Tenning)
-* Suvan Satyendira B    [@suvanbalu](https://github.com/suvanbalu)
+* Suvan Sathyendira B    [@suvanbalu](https://github.com/suvanbalu)
 
 ___
