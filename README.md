@@ -21,14 +21,14 @@ pip install -r requirements.txt
 
 There are 10 sections of English and Tamil version of Mahabharatham in the repo [resource](https://github.com/John-Tenning/VPC-Contest/tree/main/resources).   
 There are unwanted characters like brackets and quotes.  
-Both the files doesn't give equal number of sentences while spliting it when using fullstop as delimiter.  
+Both the files doesn't give equal number of sentences when spliting it when using fullstop as delimiter.  
 
 ### 2. Cleaning and Spliting of Datasets
 
 As programatic spliting of files doesn't give proper result , the files are first cleaned (removal of "",[],(),'') and sentences are split using [clean.py](https://github.com/John-Tenning/VPC-Contest/blob/main/clean.py) module.  
-Once files are been splitted manual checking is done to merge and split sentences to make equal number of sentences in both English and Tamil file.  
+Once files are splitted,manual checking is done to merge and split sentences to make equal number of sentences in both English and Tamil file.  
 This manual checking is done so that each sentence of Tamil file corresponds to sentence of English file so that bleu score can be calculated. 
-The cleaned files are saved in repo [data] as two different folders named Tamilfiles and Englishfiles.  
+The cleaned files are saved in repo [Align_files] as two different folders named Tamilfiles and Englishfiles.  
 They are saved in different folders because it makes file parsing to translation and calculating Bleu score easy.  
 
 ### 3. Translating Files
