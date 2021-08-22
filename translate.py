@@ -1,7 +1,10 @@
 def eng_translate(tamil_file : str,translate_source : str) -> None :
     '''
     Takes cleaned Tamil files as input and translate it to English using AI4bharath NLP model 
-    For setup of the required packages check readme of "https://github.com/John-Tenning/VPC-Contest"
+    For setup of the required packages check readme of "https://github.com/John-Tenning/VPC-Contest".
+
+    @param tamil_file The tamil files to be translated.
+    @param translate_source Those files that contains the translated text.
     '''
     from indicTrans.inference.engine import Model
 

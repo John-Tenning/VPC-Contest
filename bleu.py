@@ -31,6 +31,17 @@ def get_bleu_score_from_file(predict_text_file: str, test_text_file: str) -> flo
     return bleu.score
 
 def get_sentence_bleu_score_from_file(predict_text_file: str, test_text_file: str, bleu_evaluate_file: str , index: int) -> None:
+
+    """
+    This function takes a whole text file as input ,splits them into list of sentences and finds the blue score for individual snetences and return the file that contains average of all BLEU scores. 
+    For reference, see https://blog.machinetranslation.io/compute-bleu-score/ 
+    @param  predict_text_file   The predicted text file.
+    @param  test_text_file  The test text file.
+    @param  bleu_evaluate_file_file  The file to store average.
+    @param  index  indexof the reference_file.
+    @return None.
+    """
+
     score=count=0
     detokenizer = MosesDetokenizer(lang='en')
 
