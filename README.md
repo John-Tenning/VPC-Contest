@@ -19,17 +19,17 @@ pip install -r requirements.txt
 
 ### 1. Analysing the Resources
 
-There are 10 sections of English and Tamil version of Mahabharatham in the repo [resource](https://github.com/John-Tenning/VPC-Contest/tree/main/resources).   
-There are unwanted characters like brackets and quotes.  
-Both the files doesn't give equal number of sentences when spliting it using fullstop as delimiter.  
+a. There are 10 sections of English and Tamil version of Mahabharatham in the repo [resource](https://github.com/John-Tenning/VPC-Contest/tree/main/resources).   
+b. There are unwanted characters like brackets and quotes.  
+c. Both the files doesn't give equal number of sentences when spliting it using fullstop as delimiter.  
 
 ### 2. Cleaning and Spliting of Datasets
 
-As programatic spliting of files doesn't give proper result , the files are first cleaned (removal of "",[],(),'') and sentences are split using [clean.py](https://github.com/John-Tenning/VPC-Contest/blob/main/clean.py) module.  
-Once files are splitted,manual checking is done to merge and split sentences to make equal number of sentences in both English and Tamil file.  
-This manual checking is done so that each sentence of Tamil file corresponds to sentence of English file so that bleu score can be calculated. 
-The cleaned files are saved in repo [Data](https://github.com/John-Tenning/VPC-Contest/tree/main/Align_Files) as two different folders named Tamilfiles and Englishfiles.  
-They are saved in different folders because it makes file parsing to translation and calculating Bleu score easy.  
+a. As programatic spliting of files doesn't give proper result , the files are first cleaned (removal of "",[],(),'') and sentences are split using [clean.py](https://github.com/John-Tenning/VPC-Contest/blob/main/clean.py) module.  
+b. Once files are split,manual checking is done to merge and split sentences to make equal number of sentences in both English and Tamil file.  
+c. This manual checking is done so that each sentence of Tamil file corresponds to sentence of English file so that bleu score can be calculated. 
+d. The cleaned files are saved in repo [Data](https://github.com/John-Tenning/VPC-Contest/tree/main/Align_Files) as two different folders named Tamilfiles and Englishfiles.  
+e. They are saved in different folders because it makes file parsing to translation and calculating Bleu score easy.  
 
 ### 3. Translating Files
 
