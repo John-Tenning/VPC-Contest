@@ -190,8 +190,7 @@ for ind in range(22,32):
 
   for i in translate:
     write_file.writelines(i)
-    write_file.write('\n\n')
-    ```
+    write_file.write('\n\n')```
 ___
 ## Members
 
