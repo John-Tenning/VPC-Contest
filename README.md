@@ -189,6 +189,8 @@ for ind in range(22,32):
     write_file.writelines(i)
     write_file.write('\n\n')
 ```
+* The translated files using MBart Model can be found in the folder [**bonus_mbart50_m2m**](https://github.com/John-Tenning/VPC-Contest/blob/main/bonus_mbart_m2m)
+* The translated files uding Google translate can be found in the folder [**bonus_googleapi**](https://github.com/John-Tenning/VPC-Contest/blob/main/googleapi)
 ___
 ## Members
 
