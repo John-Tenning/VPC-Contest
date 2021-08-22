@@ -59,7 +59,7 @@ pip install --editable ./
 %cd ..
 ```
 
-This step is only required if you are running the code on colab. Restart the runtime after running prev cell (to update). See this [**Stackoverflow Source**](https://stackoverflow.com/questions/57838013/modulenotfounderror-after-successful-pip-install-in-google-colaboratory).
+Restart the runtime after running prev cell (to update) if you are using Colab. See this [**Stackoverflow Source**](https://stackoverflow.com/questions/57838013/modulenotfounderror-after-successful-pip-install-in-google-colaboratory).
 This import will not work without restarting runtime abstract.
 
 ```
