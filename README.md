@@ -101,6 +101,7 @@ File 31 : 6.090987459345413
 
 Average Score : 8.637598132872595
 ```
+*As this round doesn't focus of BLEU score , no imporvement in datasets and model is done to improve BLEU score*
 
 ### 5. BONUS
 
