@@ -114,6 +114,87 @@ File 31 : 6.090987459345413
 
 For the bonus part of the solution, we have approached the [**MBart-50**](https://huggingface.co/transformers/v3.5.1/model_doc/mbart.html) and [**Google Translate**](https://py-googletrans.readthedocs.io/en/latest/).
 
+The following code is used to translate using Mbart50_m2m model.
+
+```
+pip install easynmt
+from easynmt import EasyNMT
+model = EasyNMT('mbart50_m2m')
+#create a folder tamil_files
+for ind in range(22,32):
+  tamil_open = open(f"/content/tamil_files/{ind} - tam.txt",'r')
+
+  t_read = tamil_open.readlines()
+  ta_sent=[]
+  for i in range(len(t_read)):
+    if t_read[i]!='\n':
+      ta_sent.append(t_read[i].rstrip("\n"))
+      
+  max_len_split=[]
+  translate=[]
+  for i in range(len(ta_sent)):
+    k=ta_sent[i]
+    if len(k)<723:
+      translate.append(model.translate(k,target_lang='en'))
+    if len(k)>=723:
+      k=k.split()
+      max_len_split.append(''.join(k[:len(k)//2]))
+      max_len_split.append(''.join(k[len(k)//2:len(k)]))
+      ttemp=((model.translate(k,target_lang='en')))
+      stemp=' '.join(ttemp)
+      translate.append([stemp])
+
+#create a folder called translate
+
+  write_file = open(f"/content/translate/{ind} - translate.txt",'w')
+
+  for i in translate:
+    write_file.writelines(i)
+    write_file.write('\n\n')
+
+  write_file.close()
+  tamil_open.close()
+  ```
+  The second approach is done using Google translate.
+  
+  ```
+  pip install deep_translator
+  from deep_translator import GoogleTranslator
+  for ind in range(22,32):
+  tamil_open = open(f"/content/tamil_files/{ind} - tam.txt",'r')
+
+  t_read = tamil_open.readlines()
+  ta_sent=[]
+  for i in range(len(t_read)):
+    if t_read[i]!='\n':
+      ta_sent.append(t_read[i].rstrip("\n"))
+      
+  max_len_split=[]
+  translate=[]
+  if (len(ta_sent)<=5000):
+    for i in range(len(ta_sent)):
+      k=ta_sent[i]
+      translate.append(GoogleTranslator(source='tamil', target='en').translate(k))
+  else:
+    for i in range(5000):
+      k=ta_sent[i]
+      translate.append(GoogleTranslator(source='tamil', target='en').translate(k))
+    for j in range(5000,len(ta_sent)):
+       k=ta_sent[j]
+       translate.append(GoogleTranslator(source='tamil', target='en').translate(k))
+    
+
+#create a folder called translate
+
+  write_file = open(f"/content/translate/{ind} - translate.txt",'w')
+
+  for i in translate:
+    write_file.writelines(i)
+    write_file.write('\n\n')
+    ```
+    The translated files can be found in the folders [bonus_mbart50_m2m] and [bonus_googleapi].
+   
+
 ___
 ## Members
 
