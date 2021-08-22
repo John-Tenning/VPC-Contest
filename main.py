@@ -53,8 +53,10 @@ if __name__ == "__main__":
 
     #finding bleu_scores
     #Step 3 => To find the bleu score
-
+    total = 0
     for section_num in range(22,32) :
-        get_sentence_bleu_score_from_file(f'./Data/EnglishCleanfiles/{section_num} - eng.txt' ,f'./Translate/{section_num} - translate.txt' ,f"./Translate/indic_bleu_result.txt",section_num)
-
-
+        total+=get_sentence_bleu_score_from_file(f'./Data/EnglishCleanfiles/{section_num} - eng.txt' ,f'./Translate/{section_num} - translate.txt' ,"./BLEU_Result.txt",section_num)
+    f = open("./BLEU_Result.txt",'a')
+    content = f"\nAverage Score : {total/10}"
+    f.write(content)
+    
