@@ -26,7 +26,7 @@ ___
 
 * The characters: parentheses, brackets and quotations, were considered unwanted.
 
-* Tamil and English share the period/fullstop as the common sentence delimiter. But analysing the text in the files, it was found that it did not produce equal number of tamil sentences with respective translated english sentences.
+* Tamil and English share the period/fullstop as the common sentence delimiter. But analysing the text in the files, it was found that it did not produce equal number of tamil sentences with respect to translated english sentences.
 
 
 ### 2. Data Preprocessing
