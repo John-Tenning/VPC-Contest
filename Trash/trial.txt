@@ -1,7 +1,0 @@
-﻿colorama==0.4.4
-numpy==1.21.2
-portalocker==2.3.1
-pywin32==301
-regex==2021.8.21
-sacrebleu==2.0.0
-tabulate==0.8.9
