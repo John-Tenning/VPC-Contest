@@ -15,7 +15,7 @@ cd ./VPC-Contest
 pip install sacrebleu
 
 ```
-[Main.py](https://github.com/John-Tenning/VPC-Contest/blob/main/main.py) is the driver file for the solution.
+[**Main.py**](https://github.com/John-Tenning/VPC-Contest/blob/main/main.py) is the driver file for the solution.
 ___
 
 ## Strategy
@@ -76,6 +76,7 @@ unzip indic-en.zip
 ```
 
 You can find the sample Collab Notebook, [**Here**](https://colab.research.google.com/drive/1UByeetC68GibBxZq_wxVu4JxqVmdWvzY?usp=sharing).
+* The translated files are saved in the repository [**Translations**](https://github.com/John-Tenning/VPC-Contest/tree/main/Translations).  
 
 ### 4. Calculating Bleu score
 
@@ -103,11 +104,14 @@ Average Score : 8.637598132872595
 ```
 *As this round doesn't focus of BLEU score , no imporvement in datasets and model is done to improve BLEU score*
 
+* The BLEU scores of each model is saved in the repository [**Evaluation**](https://github.com/John-Tenning/VPC-Contest/tree/main/Evaluation)
+
 ### 5. BONUS
 
 For the bonus part of the solution, we have approached the [**MBart-50**](https://huggingface.co/transformers/v3.5.1/model_doc/mbart.html) and [**Google Translate**](https://py-googletrans.readthedocs.io/en/latest/).
 
-The following code is used to translate using Mbart50_m2m model.
+The following code is used to translate using Mbart50_m2m model.  
+You can find the sample Collab Notebook, [**Here**](https://colab.research.google.com/drive/1z48u2d7QIVIPveZikzeaRRFAjNpzcr9n?usp=sharing)
 
 ```
 pip install easynmt
@@ -148,9 +152,10 @@ for ind in range(22,32):
   write_file.close()
   tamil_open.close()
   ```
-  **The average BLEU score for Mbart-50 is :** 8.66 (file wise score [here](https://github.com/John-Tenning/VPC-Contest/blob/main/bonus_mbart50_m2m/mbart_bleu.txt))  
+  **The average BLEU score for Mbart-50 is :** 8.66 (file wise score [here](https://github.com/John-Tenning/VPC-Contest/blob/main/Evaluation/mbart_bleu.txt))  
   
-  The second approach is done using Google translate.
+  The second approach is done using Google translate.  
+  You can find the sample Collab Notebook, [**Here**](https://colab.research.google.com/drive/1Mad7xyJmqRfVHKca1uUiMABaXT-NyPgw?usp=sharing)
   
   ```
   pip install deep_translator
@@ -184,7 +189,7 @@ for ind in range(22,32):
     write_file.writelines(i)
     write_file.write('\n\n')
 ```
- **The average BLEU score for GoogleAPI is :** 9.51 (file wise score [here](https://github.com/John-Tenning/VPC-Contest/blob/main/bonus_googleapi/googleapi_bleu.txt))  
+ **The average BLEU score for GoogleAPI is :** 9.51 (file wise score [here](https://github.com/John-Tenning/VPC-Contest/blob/main/Evaluation/googleapi_bleu.txt))  
 
 * The translated files using MBart Model can be found in the folder [**bonus_mbart50_m2m**](https://github.com/John-Tenning/VPC-Contest/tree/main/bonus_mbart50_m2m)
 * The translated files uding Google translate can be found in the folder [**bonus_googleapi**](https://github.com/John-Tenning/VPC-Contest/tree/main/bonus_googleapi)
