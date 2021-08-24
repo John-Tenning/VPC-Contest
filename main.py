@@ -48,15 +48,15 @@ if __name__ == "__main__":
     #Step2 => To translate the Tamil files
 
     for section_num in range(22,32):
-        eng_translate(f'./Data/TamilCleanfiles/{section_num} - tam.txt',f'Translate/{section_num} - translate.txt')
+        eng_translate(f'./Data/TamilCleanfiles/{section_num} - tam.txt',f'Translations/{section_num} - translate.txt')
 
 
     #finding bleu_scores
     #Step 3 => To find the bleu score
     total = 0
     for section_num in range(22,32) :
-        total+=get_sentence_bleu_score_from_file(f'./Data/EnglishCleanfiles/{section_num} - eng.txt' ,f'./Translate/{section_num} - translate.txt' ,"./BLEU_Result.txt",section_num)
-    f = open("./BLEU_Result.txt",'a')
+        total+=get_sentence_bleu_score_from_file(f'./Data/EnglishCleanfiles/{section_num} - eng.txt' ,f'./Translations/{section_num} - translate.txt' ,"./Evaluation/Indic_bleu.txt",section_num)
+    f = open("./Evaluation/Indic_bleu.txt",'a')
     content = f"\nAverage Score : {total/10}"
     f.write(content)
     
