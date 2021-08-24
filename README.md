@@ -75,7 +75,7 @@ unzip indic-en.zip
 %cd indicTrans
 ```
 
-You can find the sample Collab Notebook, [**Here**](https://colab.research.google.com/drive/1UByeetC68GibBxZq_wxVu4JxqVmdWvzY?usp=sharing).
+You can find the sample Colab Notebook, [**Here**](https://colab.research.google.com/drive/1UByeetC68GibBxZq_wxVu4JxqVmdWvzY?usp=sharing).
 * The translated files are saved in the repository [**Translations**](https://github.com/John-Tenning/VPC-Contest/tree/main/Translations).  
 
 ### 4. Calculating Bleu score
@@ -111,7 +111,7 @@ Average Score : 8.637598132872595
 For the bonus part of the solution, we have approached the [**MBart-50**](https://huggingface.co/transformers/v3.5.1/model_doc/mbart.html) and [**Google Translate**](https://py-googletrans.readthedocs.io/en/latest/).
 
 The following code is used to translate using Mbart50_m2m model.  
-You can find the sample Collab Notebook, [**Here**](https://colab.research.google.com/drive/1z48u2d7QIVIPveZikzeaRRFAjNpzcr9n?usp=sharing)
+You can find the sample Colab Notebook, [**Here**](https://colab.research.google.com/drive/1z48u2d7QIVIPveZikzeaRRFAjNpzcr9n?usp=sharing)
 
 ```
 pip install easynmt
@@ -155,7 +155,7 @@ for ind in range(22,32):
   **The average BLEU score for Mbart-50 is :** 8.66 (file wise score [here](https://github.com/John-Tenning/VPC-Contest/blob/main/Evaluation/mbart_bleu.txt))  
   
   The second approach is done using Google translate.  
-  You can find the sample Collab Notebook, [**Here**](https://colab.research.google.com/drive/1Mad7xyJmqRfVHKca1uUiMABaXT-NyPgw?usp=sharing)
+  You can find the sample Colab Notebook, [**Here**](https://colab.research.google.com/drive/1Mad7xyJmqRfVHKca1uUiMABaXT-NyPgw?usp=sharing)
   
   ```
   pip install deep_translator
